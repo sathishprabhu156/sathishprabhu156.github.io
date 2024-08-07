@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    background-color: #76bfe9; /* A light grey background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif; /* Ensure a default font for better rendering */
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px; /* Changed border-radius to a more modern look */
+    width: 90%;
+    max-width: 500px; /* Ensure the form container doesn't get too wide */
+    padding: 20px; /* Unified padding */
+    box-shadow: 0 3px 6px rgba(85, 85, 85, 0.2);
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    margin: auto;
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 20px; /* Added some margin for spacing */
+}
+
+h2 {
+    font-family: 'elmessiri-bold';
+    font-size: 27px;
+}
+
+.color {
+    color: #068dd6;
+}
+
+.cloud {
+    width: 100px; /* Adjusted width for better responsiveness */
+    align-self: center;
+    animation: slowAnimation 500s linear infinite;
+}
+
+/***** Form *****/
+form {
+    display: flex;
+    flex-direction: row;
+    gap: 10px; /* Added gap for better spacing between elements */
+}
+
+input[type="text"] {
+    background-color: transparent;
+    border: 0;
+    border-bottom: solid 1px rgb(0, 0, 0);
+    width: 100%;
+    padding-bottom: 4px;
+    color: rgb(73, 73, 73);
+    font-weight: lighter;
+    letter-spacing: 2px;
+    font-size: 20px;
+    outline: none;
+}
+
+.submit {
+    border: 0;
+    padding: 8px 20px;
+    border-radius: 5px; /* Unified border-radius */
+    font-weight: lighter;
+    letter-spacing: 1px;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #068dd6;
+    color: #fff;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.submit:hover {
+    color: #068dd6;
+    background-color: #fff;
+    border: 2px solid #068dd6;
+}
+
+.submit:active {
+    outline: none;
+}
+
+/****** info weather *****/
+.info {
+    width: 100%;
+    letter-spacing: 2px;
+    font-size: 18px; /* Adjusted font-size for better readability */
+    font-weight: 200;
+    margin-top: 20px; /* Added margin for spacing */
+}
+
+.city {
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-bottom: 10px; /* Added margin for spacing */
+}
+
+.info_key {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.06);
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    display: flex;
+    padding: 10px 0; /* Added padding for spacing */
+}
+
+.info_key:last-child {
+    border: 0;
+}
+
+.img2 {
+    margin-right: 15px;
+}
+
+.loc {
+    width: 20px;
+}
+
+.info_value {
+    font-weight: 200;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+}
+
+.error {
+    font-weight: 400;
+    color: red;
+    text-align: center;
+    margin-top: 10px; /* Added margin for spacing */
+}
