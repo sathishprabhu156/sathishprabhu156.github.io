@@ -3,99 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>You've Been Pranked!</title>
+    <title>College Login</title>
     <style>
         body {
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-            background-color: #000;
-            color: #fff;
-            margin: 0;
-            padding: 0;
+            font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             height: 100vh;
-            overflow: hidden;
+            background-color: #f0f0f0;
+            margin: 0;
         }
-        h1 {
-            font-size: 3em;
-            text-align: center;
-            animation: shake 0.5s infinite;
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        p {
-            font-size: 1.5em;
-            text-align: center;
-            animation: fadeIn 2s ease-in-out infinite alternate;
-        }
-        @keyframes shake {
-            0% { transform: translate(1px, 1px) rotate(0deg); }
-            10% { transform: translate(-1px, -2px) rotate(-1deg); }
-            20% { transform: translate(-3px, 0px) rotate(1deg); }
-            30% { transform: translate(3px, 2px) rotate(0deg); }
-            40% { transform: translate(1px, -1px) rotate(1deg); }
-            50% { transform: translate(-1px, 2px) rotate(-1deg); }
-            60% { transform: translate(-3px, 1px) rotate(0deg); }
-            70% { transform: translate(3px, 1px) rotate(-1deg); }
-            80% { transform: translate(-1px, -1px) rotate(1deg); }
-            90% { transform: translate(1px, 2px) rotate(0deg); }
-            100% { transform: translate(1px, -2px) rotate(-1deg); }
-        }
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-        .video-container {
-            position: relative;
-            width: 90%;
-            max-width: 800px; /* Set a maximum width for larger screens */
-            padding-top: 56.25%; /* 16:9 aspect ratio */
-            margin-top: 20px;
-            border: 5px solid black;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        }
-        .video-container video {
-            position: absolute;
-            top: 0;
-            left: 0;
+        input {
+            display: block;
             width: 100%;
-            height: 100%;
-            border-radius: 10px;
-            object-fit: cover; /* Cover the container, maintaining aspect ratio */
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
         }
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2em;
-            }
-            p {
-                font-size: 1.2em;
-            }
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <h1>You've Been Pranked!</h1>
-    <p>Surprise! This is just a joke 😜</p>
-    <div class="video-container">
-        <video id="prank-video" autoplay loop playsinline muted>
-            <source src="aprilfool.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
+    <form id="login-form">
+        <h2>Login</h2>
+        <input type="text" id="email" placeholder="College Email" required>
+        <input type="text" id="reg-number" placeholder="Register Number" required>
+        <button type="submit">Submit</button>
+    </form>
+
     <script>
-        const video = document.getElementById('prank-video');
-
-        video.addEventListener('play', function() {
-            video.muted = false;
-        });
-
-        video.addEventListener('error', function(event) {
-            console.error('Video failed to load:', event);
-        });
-
-        video.addEventListener('canplay', function() {
-            console.log('Video is ready to play');
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            window.location.href = 'prank.html';
         });
     </script>
 </body>
