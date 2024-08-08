@@ -14,6 +14,8 @@
             height: 100vh;
             background-color: #f0f0f0;
             margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
         }
         .login-container {
             background-color: #fff;
@@ -26,6 +28,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            box-sizing: border-box;
         }
         .login-container h2 {
             margin-bottom: 20px;
@@ -34,7 +37,7 @@
         .login-container input {
             display: block;
             width: 100%;
-            padding: 10px;
+            padding: 15px;
             margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 4px;
@@ -42,7 +45,7 @@
             box-sizing: border-box;
         }
         .login-container button {
-            padding: 10px 20px;
+            padding: 15px 20px;
             background-color: #007BFF;
             color: #fff;
             border: none;
@@ -64,6 +67,7 @@
         @media (max-width: 600px) {
             .login-container {
                 padding: 20px;
+                box-shadow: none; /* Remove shadow for a cleaner look on mobile */
             }
             .login-container h2 {
                 font-size: 1.5em;
@@ -71,17 +75,18 @@
             }
             .login-container input {
                 font-size: 14px;
+                padding: 12px;
             }
             .login-container button {
                 font-size: 14px;
-                padding: 8px 16px;
+                padding: 12px 16px;
             }
         }
     </style>
 </head>
 <body>
     <div class="login-container">
-        <h2>College Login</h2>
+        <h2>Login</h2>
         <form id="login-form">
             <input type="text" id="email" placeholder="College Email" required>
             <input type="text" id="reg-number" placeholder="Register Number" required>
