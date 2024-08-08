@@ -15,40 +15,60 @@
             background-color: #f0f0f0;
             margin: 0;
         }
-        form {
+        .login-container {
             background-color: #fff;
-            padding: 20px;
+            padding: 40px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
         }
-        input {
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .login-container input {
             display: block;
             width: 100%;
             padding: 10px;
             margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
         }
-        button {
+        .login-container button {
             padding: 10px 20px;
             background-color: #007BFF;
             color: #fff;
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
         }
-        button:hover {
+        .login-container button:hover {
             background-color: #0056b3;
+        }
+        .login-container input:focus,
+        .login-container button:focus {
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            border-color: #007BFF;
         }
     </style>
 </head>
 <body>
-    <form id="login-form">
-        <h2>Login</h2>
-        <input type="text" id="email" placeholder="College Email" required>
-        <input type="text" id="reg-number" placeholder="Register Number" required>
-        <button type="submit">Submit</button>
-    </form>
+    <div class="login-container">
+        <h2>College Login</h2>
+        <form id="login-form">
+            <input type="text" id="email" placeholder="College Email" required>
+            <input type="text" id="reg-number" placeholder="Register Number" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 
     <script>
         document.getElementById('login-form').addEventListener('submit', function(event) {
