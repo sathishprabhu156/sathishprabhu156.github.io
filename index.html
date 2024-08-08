@@ -78,10 +78,25 @@
     <h1>You've Been Pranked!</h1>
     <p>Surprise! This is just a joke 😜</p>
     <div class="video-container">
-        <video id="prank-video" autoplay loop playsinline>
+        <video id="prank-video" autoplay loop playsinline muted>
             <source src="aprilfool.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
+    <script>
+        const video = document.getElementById('prank-video');
+
+        video.addEventListener('play', function() {
+            video.muted = false;
+        });
+
+        video.addEventListener('error', function(event) {
+            console.error('Video failed to load:', event);
+        });
+
+        video.addEventListener('canplay', function() {
+            console.log('Video is ready to play');
+        });
+    </script>
 </body>
 </html>
