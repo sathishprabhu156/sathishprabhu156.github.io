@@ -83,22 +83,5 @@
             Your browser does not support the video tag.
         </video>
     </div>
-    <script>
-        const video = document.getElementById('prank-video');
-        const unmuteButton = document.getElementById('unmute-button');
-
-        video.addEventListener('error', function(event) {
-            console.error('Video failed to load:', event);
-        });
-
-        video.addEventListener('canplay', function() {
-            console.log('Video is ready to play');
-        });
-
-        unmuteButton.addEventListener('click', function() {
-            video.muted = false;
-            unmuteButton.style.display = 'none';
-        });
-    </script>
 </body>
 </html>
