@@ -84,11 +84,21 @@
         </video>
     </div>
     <script>
-        document.getElementById('prank-video').addEventListener('error', function(event) {
+        const video = document.getElementById('prank-video');
+
+        video.addEventListener('canplay', function() {
+            video.muted = false;
+            video.play().catch(error => {
+                console.error('Error attempting to play the video:', error);
+            });
+        });
+
+        video.addEventListener('error', function(event) {
             console.error('Video failed to load:', event);
         });
-        document.getElementById('prank-video').addEventListener('canplay', function() {
-            console.log('Video is ready to play');
+
+        video.addEventListener('play', function() {
+            video.muted = false;
         });
     </script>
 </body>
